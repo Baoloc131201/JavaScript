@@ -1,0 +1,105 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(to right, #17a2b8, rgb(156, 146, 146));
+}
+
+.box {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.alert {
+    border-radius: 10px;
+    border: none;
+    outline: none;
+    font-size: 40px;
+    padding: 10px 20px;
+    background-color: white;
+    color: #17a2b8;
+    cursor: pointer;
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+}
+
+.alert::after {
+    content: "Press Any Key";
+    position: absolute;
+    top: 0;
+    left: auto;
+    right: 0;
+    border-radius: 10px;
+    width: 0;
+    height: 100%;
+    background-color: #6698a0;
+    transition: 0.5s linear;
+}
+
+.alert:hover.alert::after {
+    width: 100%;
+    left: 0;
+    right: auto;
+}
+
+.result {
+    border-radius: 100rem;
+    height: 250px;
+    width: 250px;
+    border: 7px solid white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 7rem;
+    color: white;
+    font-weight: 600;
+    margin-bottom: 6rem;
+}
+
+.card {
+    width: 300px;
+    background-color: white;
+    border: 10px;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.heading {
+    text-align: center;
+    padding: 10px;
+    background-color: #78c0c9;
+    color: white;
+    font-size: 2rem;
+}
+
+.text {
+    text-align: center;
+    font-size: 2rem;
+    color: black;
+    padding: 10px;
+}
+
+.detail {
+    display: flex;
+    gap: 20px;
+}
+
+.hide {
+    display: none;
+}

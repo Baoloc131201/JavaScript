@@ -1,0 +1,117 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+.container-swrap-sidebar {
+    width: 250px;
+    height: 64px;
+    background-color: aqua;
+    position: fixed;
+    overflow: hidden;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    transition: 0.5s linear;
+}
+
+.heading-sidebar {
+    width: 100%;
+    text-align: center;
+    line-height: 62px;
+    font-size: 2rem;
+    border-bottom: 1px solid rgb(31, 26, 26);
+}
+
+.list-item-sidebar {
+    margin-top: 10px;
+}
+
+.item-sidebar {
+    list-style: none;
+    width: 100%;
+    height: 40px;
+    line-height: 40px;
+}
+
+.item-sidebar-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    font-size: 2rem;
+    text-decoration: none;
+    transition: 0.5s linear;
+}
+
+.item-sidebar:hover .item-sidebar-link {
+    padding-left: 10px;
+}
+
+.item-sidebar:hover {
+    background-color: aquamarine;
+}
+
+.container-icon {
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    z-index: 1;
+    top: 15px;
+    margin-left: 195px;
+    cursor: pointer;
+}
+
+.container-icon2 {
+    margin-left: 10px;
+    z-index: 1;
+}
+
+.title-icon {
+    position: relative;
+    border-radius: 3px;
+    width: 100%;
+    height: 3px;
+    background-color: black;
+    display: inline-block;
+    transition: 0.5s linear;
+}
+
+.title-icon::after {
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    transform: translateY(8px);
+}
+
+.title-icon::before {
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 100%;
+    transform: translateY(8px);
+    box-shadow: 0 8px 0 0 black;
+}
+
+.open .title-icon {
+    transform: rotate(45deg);
+}
+
+.open .title-icon::after {
+    transform: rotate(-90deg);
+}
+
+.open .title-icon::before {
+    box-shadow: 0 0 0 0;
+}
+
+.open.container-swrap-sidebar {
+    height: 100%;
+}

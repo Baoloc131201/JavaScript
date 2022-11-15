@@ -1,0 +1,143 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    background: linear-gradient(to right, rgba(32, 34, 124, 0.274), rgba(64, 32, 153, 0.3));
+}
+
+.container {
+    position: relative;
+    max-width: 1000px;
+    padding: 10px;
+    margin: 0 auto;
+}
+
+.addTask {
+    width: 100%;
+    display: flex;
+    padding: 10px 0;
+}
+
+.addTask>input[type="text"] {
+    width: 90%;
+    color: #333;
+    border: none;
+    border-bottom: 2px solid #666;
+    background: none;
+    padding: 10px;
+    font-size: 22px;
+    outline: none;
+}
+
+.addTask button {
+    margin: 0 10px;
+    background: #222;
+    color: #fff;
+    font-size: 18px;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+    padding: 10px;
+    cursor: pointer;
+}
+
+.Completed,
+.notCompleted {
+    margin: 5px 0;
+    padding: 0;
+    list-style: none;
+    content: counter(my-counter);
+}
+
+h3 {
+    font-size: 28px;
+    text-transform: uppercase;
+    text-align: center;
+    color: #fff;
+}
+
+.item-notCompleted {
+    position: relative;
+    width: 100%;
+    padding: 18px;
+    margin: 5px 0;
+    background: #e96969bb;
+    font-size: 22px;
+    counter-increment: my-counter;
+}
+
+.item-Completed {
+    position: relative;
+    background: #00ff62;
+    width: 100%;
+    padding: 18px;
+    margin: 5px 0;
+    font-size: 22px;
+    counter-increment: my-counter;
+}
+
+.item-notCompleted::before {
+    content: counter(my-counter);
+    background: #231381;
+    width: 2rem;
+    height: 2rem;
+    border-radius: 100rem;
+    line-height: 2rem;
+    text-align: center;
+    color: #fff;
+    margin-right: 0.5rem;
+    display: inline-block;
+}
+
+.item-Completed::before {
+    content: counter(my-counter);
+    background: #231381;
+    width: 2rem;
+    height: 2rem;
+    border-radius: 100rem;
+    line-height: 2rem;
+    text-align: center;
+    color: #fff;
+    margin-right: 0.5rem;
+    display: inline-block;
+}
+
+.item-Completed button {
+    position: absolute;
+    padding: 5px;
+    font-size: 28px;
+    line-height: 28px;
+    background: none;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    right: 15px;
+}
+
+.item-notCompleted button:first-child {
+    position: absolute;
+    padding: 5px;
+    font-size: 28px;
+    line-height: 28px;
+    background: none;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    right: 45px;
+}
+
+.item-notCompleted button:last-child {
+    position: absolute;
+    padding: 5px;
+    font-size: 28px;
+    line-height: 28px;
+    background: none;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    right: 15px;
+}

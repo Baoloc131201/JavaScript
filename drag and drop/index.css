@@ -1,0 +1,34 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(130deg, rgb(189, 79, 180), rgb(189, 79, 170));
+}
+
+.box {
+    width: 200px;
+    height: 200px;
+    border: 2px solid black;
+    background-color: #fff;
+    margin: 0 10px;
+}
+
+.target {
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background: url("https://th.bing.com/th/id/OIP.EbevM_k6fCAmLPjSjlMFEwHaE8?pid=ImgDet&rs=1");
+}
+
+.dragging {
+    border: 2px solid rgb(60, 172, 60);
+}

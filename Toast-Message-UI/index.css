@@ -1,0 +1,131 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background: linear-gradient(to right, rgb(202, 191, 191), rgb(173, 117, 117));
+}
+
+#toast {
+    position: fixed;
+    top: 32px;
+    right: 32px;
+}
+
+.toast {
+    background-color: white;
+    display: flex;
+    align-items: center;
+    padding: 20px 0;
+    min-width: 400px;
+    max-width: 450px;
+    border-radius: 2px;
+    box-shadow: 0px 5px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+    transform: translateX(calc(100% + 32px));
+    transition: all linear 2s;
+}
+
+@keyframes slideInleft {
+    from {
+        transform: translateX(calc(100% + 32px));
+    }
+    to {
+        transform: translateX(0);
+    }
+}
+
+@keyframes fadeOut {
+    to {
+        opacity: 0;
+    }
+}
+
+.toast--success {
+    border-left: 4px solid #47d864;
+}
+
+.toast--success .toast__icon {
+    background-color: #47d864;
+}
+
+.toast--infor {
+    border-left: 4px solid #2f86eb;
+}
+
+.toast--infor .toast__icon {
+    background-color: #2f86eb;
+}
+
+.toast--error {}
+
+.toast--warning {
+    border-left: 4px solid #ffc021;
+}
+
+.toast--warning .toast__icon {
+    background-color: #ffc021;
+}
+
+.toast__icon {
+    /* padding: 0 20px; */
+    margin: 0 20px;
+    font-size: 24px;
+    border-radius: 100rem;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.toast__body {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+.toast__title {
+    font-size: 16px;
+    color: #333;
+    font-weight: 600;
+}
+
+.toast__msg {
+    font-size: 14px;
+    color: #888;
+    margin-top: 6px;
+    line-height: 1.5;
+}
+
+.toast__close {
+    padding: 0 20px;
+    font-size: 20px;
+    color: rgba(0, 0, 0, 0.3);
+    cursor: pointer;
+}
+
+.toast__close:hover {
+    color: red;
+}
+
+.container-btn {
+    display: flex;
+}
+
+.btn {
+    background-color: red;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 20px;
+    font-size: 24px;
+    cursor: pointer;
+    margin: 0 20px;
+}

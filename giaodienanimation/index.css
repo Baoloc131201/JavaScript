@@ -1,0 +1,65 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    background-color: #fff;
+    height: 100vh;
+}
+
+.container {
+    width: 100%;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+.text-hello,
+.text-name {
+    position: absolute;
+    font-size: 4rem;
+    color: black;
+    letter-spacing: 1.5rem;
+    text-transform: uppercase;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.text-hello {
+    animation: aniHello forwards 6.5s;
+}
+
+.text-name {
+    opacity: 0;
+    animation: aniname forwards 4.5s cubic-bezier(0.52, 0.06, 0.27, 1.01);
+    animation-delay: 4s;
+}
+
+@keyframes aniHello {
+    from {
+        opacity: 1;
+    }
+    to {
+        opacity: 0;
+    }
+}
+
+@keyframes aniname {
+    from {
+        opacity: 1;
+    }
+    to {
+        opacity: 0;
+    }
+}

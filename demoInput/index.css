@@ -1,0 +1,19 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.input {
+    margin: 1rem;
+    padding: 1rem;
+    outline: none;
+}
+
+.input:focus~.container-list {
+    display: none;
+}
+
+.container-list {
+    padding: 2rem;
+}

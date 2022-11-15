@@ -1,0 +1,48 @@
+*::after,
+::before,
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.owl-carousel {
+    width: 1000px;
+    margin: 100px auto 30px auto;
+}
+
+#owl-demo .item img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+.item {
+    animation: fade-image 1.5s;
+}
+
+.dot {
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: transparent;
+    border-color: #ddd;
+    border-width: 5 px;
+    border-style: solid;
+    border-radius: 50%;
+    display: inline-block;
+    transition: border-color 0.6s ease;
+}
+
+.active {
+    border-color: #666;
+}
+
+@keyframes fade-image {
+    from {
+        opacity: 0
+    }
+    to {
+        opacity: 1
+    }
+}

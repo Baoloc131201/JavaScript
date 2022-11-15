@@ -1,0 +1,123 @@
+:root {
+    --success-color: #2691d9;
+    --error-color: #e74c3c;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: linear-gradient(to right, #8bbfe2, #3ca7ee);
+}
+
+.container {
+    width: 400px;
+    background-color: white;
+    border-radius: 10px;
+    padding: 40px;
+}
+
+.heading-form {
+    text-align: center;
+    font-size: 3rem;
+}
+
+.form-control {
+    width: 100%;
+    margin: 40px 0;
+    position: relative;
+}
+
+.input {
+    width: 100%;
+    height: 40px;
+    border: none;
+    outline: none;
+    border-bottom: 2px solid #adadad;
+}
+
+.border-bottom-span {
+    position: absolute;
+    display: inline-block;
+    width: 0%;
+    height: 2px;
+    left: 0;
+    top: 39px;
+    border-bottom: 2px solid var(--success-color);
+    transition: 0.5s linear;
+}
+
+.input:focus~.border-bottom-span {
+    width: 100%;
+}
+
+.title-error {
+    display: inline-block;
+    margin-top: 10px;
+    color: var(--error-color);
+    font-size: 1.6rem;
+}
+
+.form-control.error .input {
+    border-bottom: 2px solid var(--error-color);
+}
+
+.btn-login {
+    position: relative;
+    width: 100%;
+    cursor: pointer;
+    height: 50px;
+    border-radius: 25px;
+    outline: none;
+    border: none;
+    text-align: center;
+    font-size: 2rem;
+    color: white;
+    background: linear-gradient(to right, #81a5bd, #2691d9);
+}
+
+.btn-login::after {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 100%;
+    left: auto;
+    right: 0;
+    top: 0;
+    border-radius: 25px;
+    background-color: #dfacac66;
+    transition: 0.5s linear;
+}
+
+.btn:hover.btn-login::after {
+    width: 100%;
+    left: 0;
+    right: auto;
+}
+
+.signup-link {
+    text-align: center;
+    margin-top: 30px;
+    font-size: 1.6rem;
+}
+
+.title-link {
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.title-link:hover {
+    text-decoration: underline;
+}
